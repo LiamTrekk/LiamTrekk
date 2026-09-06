@@ -2,10 +2,10 @@
 
 **Field IT engineer building production systems.** London.
 
-I run the IT for a 114-room care home, deploy to enterprise client sites as a field
-engineer, and decommission drives in a data centre. Alongside that I design, build and
-operate **XOTLIST** — an automated entertainment platform — on my own, using AI agents as
-a development force multiplier.
+I design, build and operate **XOTLIST** — an automated entertainment platform — single-handedly,
+using AI agents as a development force multiplier. Day to day I work as a field engineer across
+enterprise, legal, higher-education and government client sites, and handle secure media
+sanitisation in a data centre.
 
 ---
 
@@ -71,8 +71,8 @@ That constraint is the thread running through all three repositories above.
 `PHP` · `Python` · `MySQL` / `MariaDB` · `WordPress` · `Linux` · `Docker` · `Git`
 `SPARQL` / `Wikidata` · `REST APIs` · `Blender` · `MCP` · `Lighthouse CI`
 
-**Also:** enterprise hardware deployment · network fault diagnosis · secure media
-sanitisation (degaussing, chain of custody) · statutory compliance record keeping
+**Also:** enterprise hardware rollout · network configuration and fault diagnosis · secure
+media sanitisation (degaussing, certified destruction, chain of custody)
 
 ---
 
