@@ -131,6 +131,7 @@ media sanitisation (degaussing, certified destruction, chain of custody)
 
 ### Currently
 
-Working towards **CompTIA A+**, then **AWS Solutions Architect Associate**.
+Strengthening infrastructure fundamentals alongside production engineering work, and
+working towards **AWS Solutions Architect Associate**.
 
 📧 [Trekkwill55@gmail.com](mailto:Trekkwill55@gmail.com)
