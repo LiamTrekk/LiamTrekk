@@ -40,6 +40,45 @@ Every outbound call is cached, every fallback chain terminates in a usable defau
 dead upstream degrades a page rather than breaking it. Ingestion runs ahead of request time,
 so a page load is a database read.
 
+
+### Architecture
+
+The backend is deliberately layered, and deliberately not a framework rewrite:
+
+```
+   WordPress theme / REST / CLI
+            │
+            ▼
+   Presentation adapters
+            │
+            ▼
+   Application layer
+            │
+            ▼
+   Repository / port contracts        ← XOTLIST owns these
+            │
+            ▼
+   Infrastructure adapters
+            │
+            ▼
+   Eloquent/MySQL · WordPress · APIs · Graph · Redis
+```
+
+This is a **Laravel-class architecture lane, not a Laravel conversion** — the framework
+itself does not run the platform. What was adopted is the model: a framework-independent
+domain, application and contracts held separate, repository ports, infrastructure adapters
+beneath them, dependency injection at the composition root with constructor injection
+elsewhere, and CQRS-lite separation of read and write repositories. Deliberately excluded:
+wrapping WordPress core tables wholesale in an ORM.
+
+The governing rule is **own the interface, rent the implementation**. WordPress, MySQL, a
+third-party API or Redis all sit behind contracts XOTLIST defines, so any of them can be
+swapped without the domain layer knowing.
+
+First materialisation: 47 governed changes — 20 domain files, 16 contracts-support files,
+8 repository interfaces, 3 tooling modifications — defining 25 contract methods, split
+15 read / 10 write.
+
 ---
 
 ### Selected engineering
