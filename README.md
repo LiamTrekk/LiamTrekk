@@ -48,11 +48,13 @@ so a page load is a database read.
 | **[xotlist-awards](https://github.com/LiamTrekk/xotlist-awards)** | Wikidata SPARQL sync building shows → editions → categories → nominees. QID-based entity resolution reconciling nominees matched by identifier with those matched by name. Five-level URL hierarchy with a custom sitemap provider, because the URLs aren't post-backed. Image resolution cascade with provenance reporting. |
 | **[xotlist-feed-engine](https://github.com/LiamTrekk/xotlist-feed-engine)** | Scheduled ingestion from Deezer, TMDB, iTunes and 12 publication feeds. Asymmetric cache TTLs — successful lookups hold for 7 days, failures retry after 6 hours. RSS items land as drafts flagged for editorial review rather than auto-publishing machine summaries. |
 | **[blender-mcp-tools](https://github.com/LiamTrekk/blender-mcp-tools)** | Blender driven by an AI model over MCP. The model can't see the viewport, so weighting is computed geometrically rather than eyeballed, and reruns are idempotent. |
+| **[xotlist-agent-governance](https://github.com/LiamTrekk/xotlist-agent-governance)** | The control plane the other three are built under. Authority model, capability denials, hash-pinned independent review — with real production records and a verifier that runs against them. |
 
 
-**Executable verification:** 60 focused invariant tests across the three extracts, enforced on
-every push in GitHub Actions. Framework-bound WordPress behaviour is deliberately excluded
-rather than hidden behind mocks — each repository states its boundary explicitly.
+**Executable verification:** 60 focused invariant tests across the three engineering extracts,
+plus lineage verification over the governance records, enforced on every push in GitHub
+Actions. Framework-bound WordPress behaviour is deliberately excluded rather than hidden
+behind mocks — each repository states its boundary explicitly.
 
 ---
 
