@@ -13,7 +13,8 @@ sanitisation in a data centre.
 
 An entertainment and culture platform covering music, film and streaming, sport, fashion,
 concerts and an annual awards programme. Custom WordPress application: **59 page templates,
-12 bespoke content types**, running on Linux VPS infrastructure.
+12 bespoke content types**, running on Linux VPS infrastructure with Dockerised services,
+scheduled cron workers and passwordless sign-in built on WebAuthn.
 
 The interesting part is that most of it populates itself.
 
@@ -69,14 +70,14 @@ happily stack a second armature on the same mesh, or re-ingest the same feed twi
 scripts are idempotent, the ingestion defaults to dry-run, cron is opt-in rather than
 opt-out, and anything a human would normally check by eye is computed and tested instead.
 
-That constraint is the thread running through all three repositories above.
+That constraint is the thread running through all four engineering repositories above.
 
 ---
 
 ### Stack
 
 `PHP` · `Python` · `MySQL` / `MariaDB` · `WordPress` · `Linux` · `Docker` · `Git`
-`SPARQL` / `Wikidata` · `REST APIs` · `Blender` · `MCP` · `Lighthouse CI`
+`SPARQL` / `Wikidata` · `REST APIs` · `WebAuthn` · `Blender` · `MCP` · `Lighthouse CI`
 
 **Also:** enterprise hardware rollout · network configuration and fault diagnosis · secure
 media sanitisation (degaussing, certified destruction, chain of custody)
