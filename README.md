@@ -75,9 +75,15 @@ The governing rule is **own the interface, rent the implementation**. WordPress,
 third-party API or Redis all sit behind contracts XOTLIST defines, so any of them can be
 swapped without the domain layer knowing.
 
-First materialisation: 47 governed changes — 20 domain files, 16 contracts-support files,
-8 repository interfaces, 3 tooling modifications — defining 25 contract methods, split
-15 read / 10 write.
+The design was itself put through the governance process in the repository below: authored,
+independently reviewed by a different model, then accepted by the owning authority — twice,
+once for the design and again for its implementation. The accepted design is frozen at mode
+`0444` and pinned by SHA-256; the boundaries between layers are enforced in tooling by
+deptrac rather than left to discipline.
+
+First materialisation: **47 governed changes** — 44 created, 3 modified — comprising 20 domain
+files, 16 contracts-support files, 8 repository interfaces and 3 architecture-tooling changes,
+defining 25 repository methods split 15 read / 10 write.
 
 ---
 
